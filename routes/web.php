@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\BookController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +19,8 @@ use App\Http\Controllers\HomeController;
     return view('welcome');
 });*/
 
+
+Route::get('/books', [BookController::class, 'index']);
 
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/cl', [HomeController::class, 'clindex']);

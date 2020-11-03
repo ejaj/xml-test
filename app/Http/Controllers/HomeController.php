@@ -51,6 +51,10 @@ class HomeController extends Controller
         return view('create');
     }
 
+    /**
+     * @param Request $request
+     * @return $this
+     */
     public function store(Request $request)
     {
         ini_set('memory_limit', '-1');
